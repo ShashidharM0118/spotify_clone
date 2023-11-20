@@ -1,0 +1,270 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin:0;
+    background-color: black;
+    color:white;
+    overflow: hidden; 
+    /* no scrollable , if there is overflow */
+
+}
+
+.main{
+     display:flex;
+     height: 100vh;  /* 100vh stands for complete height of viewport  */
+     padding:0.2rem;
+     
+}
+.sidebar{
+    background-color: #000000;
+    margin:0.2rem;
+    width:18.75rem;
+    border-radius: 1rem;  /* it means 16px for normal size of the windos(relative) */
+    
+
+}
+.main-content{
+    background-color: #121212;
+    margin:0.2rem;
+    border-radius: 1rem;
+    flex:1;  /* this means giving size as per content to rest flex item and giving rest alls space to this flex item  */
+    overflow:auto; /* scroll bar appears only when there is a overflow */
+    padding:0 2rem 0 2rem;
+}
+.music-player{
+    background-color: black;
+    border-radius: 1rem;
+    position:fixed;
+    bottom:0px;
+    width:100%;
+    height:60px;
+    z-index:1;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+.nav{
+    display:flex;
+    flex-direction: column;
+    justify-content: center; 
+    height:6.25rem;
+    border-radius: 0.7rem;
+    background-color: #121212;
+    padding:0.5rem 0.75rem;
+    margin-top:0.2rem;
+    
+}
+.nav-option{
+    margin:0.3rem;
+    opacity: 0.7;
+    line-height: 2.5rem;
+}
+.nav-option:hover{
+    opacity:1;
+}
+.nav-option i{
+    font-size:1.25rem;
+}
+.nav-option a{
+    font-size:1rem;
+    margin-left:1rem;
+}
+.library{
+    background-color: #121212;
+    border-radius:1rem;
+    height: 100%;
+}
+.options{
+    display:flex;
+    justify-content: space-between;
+    padding:0.5rem 0.75rem;
+    height:2.5rem;
+    border-radius: 0.7rem;
+    margin:0.45rem;
+}
+.lib-option a{
+    font-size: 1rem;
+    margin-left:1rem;
+}
+.icons i{
+    margin-right:1rem ;
+    font-size:1.25rem;
+    line-height: 2.5rem;
+}
+.lib-option img{
+    height: 1.25rem;
+    width:1.25rem;
+}
+.box{
+    
+    border-radius: 0.7rem;
+    padding:1rem 1.25rem;
+    margin:0.2rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    background:#232323;
+    display:flex;
+    flex-direction: column;
+    gap:1.2rem;
+    justify-content: space-around;
+}
+.box-p1{
+    font-size:1rem;
+
+    font-weight: 500;
+
+}
+.box-p2{
+    font-size:0.75rem;
+    opacity: 0.9;
+    line-height: 1.9rem;
+}
+.badge{
+    font-weight: 700;
+    padding:0.4rem 0.8rem;
+    height:1.85rem;
+    border: none;
+    border-radius: 5.4rem;
+    width:fit-content;
+    
+}
+.sticky-nav{
+    position:sticky;
+    top:0;
+    z-index: 1;
+    align-items: center;
+    padding: 1rem 0.3rem 1rem 0.3rem;
+    background-color: #121212;
+    display:flex;
+    justify-content: space-between;
+    margin-right: 0.5rem;
+}
+.sticky-icons{
+    margin-left:0.7rem;
+}
+.sticky-option{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.sticky-option button{
+    margin-right: 0.9rem;
+}
+.dark-badge{
+    background-color: black;
+    color:white;
+}
+
+@media(max-width:800px){
+    .hide{
+        display:none;
+    }
+}
+.card-container{
+    display:flex;
+    flex-wrap:wrap;  /* will avoid squeezing of flex item and make them excess item to move to nextline */
+    
+
+
+}
+.card{
+    background-color: #232323;
+    width:200px;
+    border-radius: 0.7rem;
+    padding:1rem;
+    margin-bottom: 1.5rem;
+    margin-left:2rem;
+}
+.card-img{
+    width:100%;
+    border-radius: 0.7rem;
+}
+.card-title{
+    font-weight: 600;
+}
+.card-info{
+    font-size: 0.79rem;
+    opacity:0.8;
+}
+.footer{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}
+.line{
+    width: 90%;
+    height: 50%;
+    border-top: 1px solid white;
+}
+.music-player{
+    display: flex;
+    justify-content: space-between;
+
+    padding-bottom: 0.3rem;
+    padding-top: 0.3rem;
+    
+}
+.album{
+    width: 25%;
+}
+.player{
+    width: 50%;
+    height: 1rem;
+    
+}
+.control{
+    width: 25%;
+}
+.player-controls img{
+    height: 1rem;
+}
+.player-controls{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    margin-top: 0.2rem;;
+  
+}
+.player-control-icon{
+    margin-left: 2rem;
+    opacity: 0.7;
+}
+.player-control-icon:hover{
+    opacity: 1;
+}
+
+
+.playback-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progress-bar{
+    width: 70%;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.progress-bar::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius:100px;
+    height: 0.2rem;
+}
+.progress-bar::-webkit-slider-runnable-track:hover{
+    background-color: #1bd760;
+}
+.progress-bar::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    margin-top:-6px;
+    background-color: white;   
+    transform: 2s linear;
+}
+.scale:hover{
+    transform: scale(1.1);
+}
